@@ -1,0 +1,59 @@
+/*!
+Theme Name: 31w - Elisabeth Theoret
+Theme URI: http://underscores.me/
+Author: Elisabeth Theoret
+Author URI: https://github.com/elisabeththeoret/31w_elisabeth
+Description: Description
+Version: 1.0.0
+Text Domain: _31w
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+
+/* Colors
+--------------------------------------------- */
+@import "variables/colors";
+
+/* Typography
+--------------------------------------------- */
+@import "variables/typography";
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+/* Normalize
+--------------------------------------------- */
+@import "generic/normalize";
+
+/* Box sizing
+--------------------------------------------- */
+@import "generic/box-sizing";
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Elements Body
+--------------------------------------------- */
+@import "base/elements/body";
+
+/* Elements Buttons
+--------------------------------------------- */
+@import "base/elements/buttons";
+
+/* Elements Fields
+--------------------------------------------- */
+@import "base/elements/fields";
+
+/* Typography Copy
+--------------------------------------------- */
+@import "base/typography/copy";
+
+/* Typography Headings
+--------------------------------------------- */
+@import "base/typography/headings";
