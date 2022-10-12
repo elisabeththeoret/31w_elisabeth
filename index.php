@@ -23,7 +23,15 @@ get_header();
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-				the_title();
+			?>
+
+				<h2><?= the_title(); ?></h2>
+				<?php the_content(); ?>
+				<blockquote><?= the_excerpt(); ?></blockquote>
+				<pre><?= the_category() ?></pre>
+				<pre><?= the_date() ?></pre>
+
+			<?php
 			endwhile;
 
 		endif;
