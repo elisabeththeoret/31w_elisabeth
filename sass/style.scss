@@ -37,23 +37,4 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-
-/* Elements Body
---------------------------------------------- */
-@import "base/elements/body";
-
-/* Elements Buttons
---------------------------------------------- */
-@import "base/elements/buttons";
-
-/* Elements Fields
---------------------------------------------- */
-@import "base/elements/fields";
-
-/* Typography Copy
---------------------------------------------- */
-@import "base/typography/copy";
-
-/* Typography Headings
---------------------------------------------- */
-@import "base/typography/headings";
+@import "base/base";
