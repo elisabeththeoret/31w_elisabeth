@@ -25,7 +25,7 @@ get_header();
 				the_post();
 				$titreOg = get_the_title();
 				$codeCours = substr($titreOg,0,7);
-				$heuresCours = substr($titreOg, strrpos($titreOg, "("));
+				$heuresCours = substr($titreOg, strrpos($titreOg,"("));
 				$titre = substr($titreOg, strpos($titreOg," "), strrpos($titreOg,"(") - strlen($titreOg));
 			?>
 				<h2><?= $titre ?></h2>
