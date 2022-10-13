@@ -24,13 +24,11 @@ get_header();
 			while ( have_posts() ) :
 				the_post();
 			?>
-
-				<h2><?= the_title(); ?></h2>
+				<h2><?= get_the_title(); ?></h2>
 				<blockquote><?= wp_trim_words(get_the_excerpt(),50,"<a href='".get_the_permalink()."'>Suite</a>"); ?></blockquote>
-				<pre><?= the_category() ?></pre>
-				<pre><?= the_date() ?></pre>
-				<pre><?= the_permalink() ?></pre>
-
+				<pre><?= the_category(); ?></pre>
+				<pre><?= the_date(); ?></pre>
+				<pre><?= get_the_author(); ?></pre>
 			<?php
 			endwhile;
 
