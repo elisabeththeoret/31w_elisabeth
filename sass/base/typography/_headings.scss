@@ -6,3 +6,33 @@ h5,
 h6 {
 	clear: both;
 }
+
+h1 {
+	font-size: clamp(2rem, 2rem, 4rem);
+	font-family: $font__headings;
+}
+
+h2 {
+	font-size: clamp(.9rem, 3vw, 3rem);
+	font-family: $font__headings;
+}
+
+h3 {
+	font-size: clamp(.9rem, 3vw, 3rem);
+	font-family: $font__headings;
+}
+
+h4 {
+	font-size: clamp(.8rem, 3vw, 2rem);
+	font-family: $font__headings;
+}
+
+h5 {
+	font-size: clamp(.7rem, 3vw, 2rem);
+	font-family: $font__headings;
+}
+
+h6 {
+	font-size: clamp(.6rem, 2vw, 2rem);
+	font-family: $font__headings;
+}
