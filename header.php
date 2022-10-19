@@ -28,7 +28,10 @@
 	<header id="masthead" class="site__header">
 		<?php
 			wp_nav_menu(array(
-				"menu" => "principal",
+				"menu" => "principale",
+				"container" => "nav",
+				"container_class" => "nav__principale",
+				"menu_class" => "nav",
 			));
 		?>
 
