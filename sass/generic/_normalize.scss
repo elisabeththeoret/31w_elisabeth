@@ -13,6 +13,15 @@ html {
 	-webkit-text-size-adjust: 100%;
 }
 
+/**
+ * Remove all margins and paddings to every element
+  */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
 /* Sections
 	 ========================================================================== */
 
