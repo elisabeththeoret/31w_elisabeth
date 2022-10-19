@@ -566,4 +566,24 @@ select {
 
 textarea {
   width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+/* Navigation
+--------------------------------------------- */
+.nav__principale {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.nav__principale .nav {
+  display: flex;
+  gap: 40px;
+}
+
+.nav__principale .nav > * {
+  list-style-type: none;
 }/*# sourceMappingURL=style.css.map */
