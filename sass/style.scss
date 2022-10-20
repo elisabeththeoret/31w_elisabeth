@@ -22,6 +22,10 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 --------------------------------------------- */
 @import "variables/typography";
 
+/* Structure
+--------------------------------------------- */
+@import "variables/structure";
+
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -42,4 +46,9 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-@import "components/components"
+@import "components/components";
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+@import "layouts/layouts";

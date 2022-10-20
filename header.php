@@ -54,3 +54,7 @@
 			<?php endif; ?>
 		</div><!-- .site__branding -->
 	</header><!-- #masthead -->
+
+	<aside class="site__sidebar">
+		<h2>Menu sidebar</h2>
+	</aside><!-- .site__sidebar -->
