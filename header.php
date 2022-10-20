@@ -27,12 +27,14 @@
 
 	<header id="masthead" class="site__header">
 		<?php
-			wp_nav_menu(array(
-				"menu" => "principale",
-				"container" => "nav",
-				"container_class" => "nav__principale",
-				"menu_class" => "nav",
-			));
+			wp_nav_menu(
+				array(
+					"menu" => "principale",
+					"container" => "nav",
+					"container_class" => "nav__principale",
+					"menu_class" => "nav",
+				)
+			);
 		?>
 
 		<div class="site__branding">
@@ -58,11 +60,13 @@
 	<aside class="site__sidebar">
 		<h2>Cours</h2>
 		<?php
-			wp_nav_menu(array(
-				"menu" => "sidebar",
-				"container"=> "nav",
-				"container_class"=> "nav__sidebar",
-				"menu_class" => "nav",
-			));
+			wp_nav_menu(
+				array(
+					"menu" => "sidebar",
+					"container"=> "nav",
+					"container_class"=> "nav__sidebar",
+					"menu_class" => "nav",
+				)
+			);
 		?>
 	</aside><!-- .site__sidebar -->
