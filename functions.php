@@ -144,7 +144,7 @@ function igc31w_widgets_init() {
 function igc31w_scripts() {
 	// wp_enqueue_style( 'igc31w-style', get_stylesheet_uri(), array(), _S_VERSION );
 
-	wp_enqueue_style('main-styles', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css'), false);
+	wp_enqueue_style( 'main-styles', get_template_directory_uri() . '/style.css', array(), filemtime( get_template_directory() . '/style.css' ), false );
 
 	wp_style_add_data( 'igc31w-style', 'rtl', 'replace' );
 
