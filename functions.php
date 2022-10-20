@@ -187,3 +187,21 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 */
 
+/**
+ * Changes the titles of the menu sidebar
+ */
+function igc31w_filtre_choix_menu( $obj_menu, $arg ) {
+	if ( $arg->menu == "sidebar" ) {
+
+		foreach ( $obj_menu as $cle => $value ) {
+			$value->title = substr( $value->title, strpos( $value->title, " " ) );
+			$value->title = substr( $value->title, 0, strrpos( $value->title, "(" ) - strlen( $value->title ) );
+
+			// $value->title = wp_trim_words( $value->title, 3, " ..." );
+		}
+
+	}
+
+	return $obj_menu;
+}
+add_filter( 'wp_nav_menu_objects', 'igc31w_filtre_choix_menu', 10, 2 );
