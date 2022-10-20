@@ -582,16 +582,14 @@ textarea {
 /* Navigation
 --------------------------------------------- */
 .nav__principale {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 20px;
+  display: flex;
+  padding: 20px 40px;
 }
 
 .nav__principale .nav {
+  flex: 1;
   display: flex;
   gap: 40px;
-}
-
-.nav__principale .nav > * {
+  margin: 0;
   list-style-type: none;
 }/*# sourceMappingURL=style.css.map */
