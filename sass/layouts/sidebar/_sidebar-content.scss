@@ -18,6 +18,9 @@
 
 .site__sidebar {
 	grid-area: sidebar;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 	padding: 20px 40px;
 	background-color: #cccccc;
 }
