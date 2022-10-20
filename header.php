@@ -56,5 +56,13 @@
 	</header><!-- #masthead -->
 
 	<aside class="site__sidebar">
-		<h2>Menu sidebar</h2>
+		<h2>Cours</h2>
+		<?php
+			wp_nav_menu(array(
+				"menu" => "sidebar",
+				"container"=> "nav",
+				"container_class"=> "nav__sidebar",
+				"menu_class" => "nav",
+			));
+		?>
 	</aside><!-- .site__sidebar -->

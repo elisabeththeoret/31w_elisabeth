@@ -50,6 +50,7 @@ function igc31w_setup() {
 	register_nav_menus(
 		array(
 			'principale' => esc_html__( 'Principale', 'igc31w' ),
+			'sidebar' => esc_html__( 'Sidebar', 'igc31w' ),
 			'footer' => esc_html__( 'Footer', 'igc31w' ),
 		)
 	);
