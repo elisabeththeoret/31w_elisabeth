@@ -8,7 +8,6 @@
  *
  * @package igc31w
  */
-
 ?>
 
 	<footer class="site__footer">

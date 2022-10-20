@@ -14,6 +14,7 @@
 
 get_header();
 ?>
+
 	<h1>category-cours.php</h1>
 	<main class="site__main">
 
@@ -23,13 +24,13 @@ get_header();
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-				$titreOg = get_the_title();
-				$codeCours = substr($titreOg,0,7);
-				$heuresCours = substr($titreOg, strrpos($titreOg,"("));
-				$titre = substr($titreOg, strpos($titreOg," "), strrpos($titreOg,"(") - strlen($titreOg));
+				$titre = get_the_title();
+				$codeCours = substr( $titre, 0, 7 );
+				$heuresCours = substr( $titre, strrpos( $titre, "(" ) );
+				$titre = substr( $titre, strpos( $titre, " " ), strrpos( $titre, "(" ) - strlen( $titre ) );
 			?>
 				<h2><?= $titre ?></h2>
-				<blockquote><?= wp_trim_words(get_the_excerpt(),50,"<a href='".get_the_permalink()."'>Suite</a>"); ?></blockquote>
+				<blockquote><?= wp_trim_words( get_the_excerpt(), 50, "<a href='" . get_the_permalink() . "'>Suite</a>" ); ?></blockquote>
 				<pre><?= the_category(); ?></pre>
 				<pre><?= the_date(); ?></pre>
 				<pre><?= get_the_author(); ?></pre>
