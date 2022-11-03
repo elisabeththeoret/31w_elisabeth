@@ -12,7 +12,7 @@
 
 	<footer class="site__footer">
 		<h2>Pied de page du IGC31W</h2>
-	</footer><!-- #colophon -->
+	</footer><!-- .site__footer -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

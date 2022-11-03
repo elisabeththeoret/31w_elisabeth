@@ -35,7 +35,7 @@ get_header();
 		endif;
 		?>
 
-	</main><!-- #main -->
+	</main><!-- .site__main -->
 
 <?php
 get_footer();
