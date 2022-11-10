@@ -29,9 +29,9 @@
 		<?php
 			wp_nav_menu(
 				array(
-					"menu" => "principale",
+					"menu" => "principal",
 					"container" => "nav",
-					"container_class" => "nav__principale",
+					"container_class" => "nav__principal",
 					"menu_class" => "nav",
 				)
 			);
@@ -63,7 +63,7 @@
 	</header><!-- #masthead -->
 
 	<aside class="site__sidebar">
-		<h2>Cours</h2>
+		<h3>Cours</h3>
 		<?php
 			wp_nav_menu(
 				array(

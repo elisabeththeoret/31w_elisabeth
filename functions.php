@@ -49,7 +49,7 @@ function igc31w_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'principale' => esc_html__( 'Principale', 'igc31w' ),
+			'principal' => esc_html__( 'Principal', 'igc31w' ),
 			'sidebar' => esc_html__( 'Sidebar', 'igc31w' ),
 			'footer' => esc_html__( 'Footer', 'igc31w' ),
 		)
