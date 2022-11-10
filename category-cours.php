@@ -24,14 +24,12 @@ get_header();
 		/* Start the Loop */
 		while ( have_posts() ) :
 			the_post();
-			$titre = get_the_title();
-			$codeCours = substr( $titre, 0, 7 );
-			$heuresCours = substr( $titre, strrpos( $titre, "(" ) );
-			$titre = substr( $titre, strpos( $titre, " " ), strrpos( $titre, "(" ) - strlen( $titre ) );
+			// $titre = get_the_title();
+			// $titre = substr( $titre, strpos( $titre, " " ), strrpos( $titre, "(" ) - strlen( $titre ) );
 		?>
 
-			<h2><?= $titre ?></h2>
-			<pre><?= $codeCours ?></pre>
+			<h2><?= the_field('nom_du_cours'); ?></h2>
+			<pre><?= the_field('sigle_du_cours'); ?> - <?= the_field('duree_du_cours') ?>h</pre>
 			<p><?= wp_trim_words( get_the_excerpt(), 40, " <a href='" . get_the_permalink() . "'>Suite</a>" ); ?></p>
 			<pre></pre>
 
@@ -41,7 +39,7 @@ get_header();
 	endif;
 	?>
 
-	</main><!-- #main -->
+	</main><!-- /.site__main -->
 
 <?php
 get_footer();
