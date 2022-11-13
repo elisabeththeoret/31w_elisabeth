@@ -50,7 +50,6 @@ function igc31w_setup() {
 	register_nav_menus(
 		array(
 			'principal' => esc_html__( 'Principal', 'igc31w' ),
-			'sidebar' => esc_html__( 'Sidebar', 'igc31w' ),
 			'footer' => esc_html__( 'Footer', 'igc31w' ),
 		)
 	);
@@ -191,7 +190,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Changes the titles of the menu sidebar
  */
 function igc31w_filtre_choix_menu( $obj_menu, $arg ) {
-	if ( $arg->menu == "sidebar" ) {
+	if ( $arg->menu == "aside" ) {
 
 		foreach ( $obj_menu as $cle => $value ) {
 			$value->title = substr( $value->title, strpos( $value->title, " " ) );

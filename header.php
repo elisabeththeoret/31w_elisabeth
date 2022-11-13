@@ -61,16 +61,15 @@
 		</div><!-- .site__branding -->
 	</header><!-- #masthead -->
 
-	<aside class="site__sidebar">
+	<aside class="site__menu">
 		<h2>Cours</h2>
 		<?php
 			wp_nav_menu(
 				array(
-					"menu" => "sidebar",
-					"container"=> "nav",
-					"container_class"=> "nav__sidebar",
-					"menu_class" => "nav",
+					"menu" => "aside",
+					"container" => "nav",
+					"container_class" => "menu__aside",
 				)
 			);
 		?>
-	</aside><!-- .site__sidebar -->
+	</aside><!-- .site__menu -->
