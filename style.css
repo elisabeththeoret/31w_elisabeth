@@ -583,12 +583,12 @@ textarea {
 --------------------------------------------------------------*/
 /* Navigation principale
 --------------------------------------------- */
-.nav__principale {
+.menu__principal {
   display: flex;
   padding: 20px 40px;
 }
 
-.nav__principale .nav {
+.menu__principal .menu {
   flex: 1;
   display: flex;
   gap: 40px;

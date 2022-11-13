@@ -29,10 +29,9 @@
 		<?php
 			wp_nav_menu(
 				array(
-					"menu" => "principale",
+					"menu" => "principal",
 					"container" => "nav",
-					"container_class" => "nav__principale",
-					"menu_class" => "nav",
+					"container_class" => "menu__principal",
 				)
 			);
 		?>
