@@ -15,8 +15,8 @@
 get_header();
 ?>
 
-	<h1>Single.php</h1>
 	<main class="site__main">
+		<code>single.php</code>
 
 		<?php
 		if ( have_posts() ) :

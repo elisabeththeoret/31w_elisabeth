@@ -14,8 +14,9 @@
 
 get_header();
 ?>
-	<h1>Index.php</h1>
+	<h1></h1>
 	<main class="site__main">
+		<code>Index.php</code>
 
 		<?php
 		if ( have_posts() ) :
