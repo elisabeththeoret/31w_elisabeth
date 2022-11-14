@@ -1,0 +1,12 @@
+.menu__principal {
+	display: flex;
+	padding: 20px 40px;
+}
+
+.menu__principal .menu {
+	flex: 1;
+	display: flex;
+	gap: 40px;
+	margin: 0;
+	list-style-type: none;
+}

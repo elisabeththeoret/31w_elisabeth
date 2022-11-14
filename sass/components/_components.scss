@@ -1,7 +1,11 @@
 /* Navigation principale
 --------------------------------------------- */
-@import "navigation/nav_principal";
+@import "navigation/menu_principal";
 
 /* Navigation sidebar
 --------------------------------------------- */
-@import "navigation/nav_sidebar";
+@import "navigation/menu_aside";
+
+/* Sidebar
+--------------------------------------------- */
+@import "sidebar";

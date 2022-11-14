@@ -50,7 +50,6 @@ function igc31w_setup() {
 	register_nav_menus(
 		array(
 			'principal' => esc_html__( 'Principal', 'igc31w' ),
-			'sidebar' => esc_html__( 'Sidebar', 'igc31w' ),
 			'footer' => esc_html__( 'Footer', 'igc31w' ),
 		)
 	);
@@ -121,13 +120,24 @@ add_action( 'after_setup_theme', 'igc31w_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function igc31w_register_sidebars() {
-	/* Register the 'primary' sidebar. */
+function igc31w_widgets_init() {
 	register_sidebar(
 		array(
-			'id'            => 'primary',
-			'name'          => __( 'Primary Sidebar' ),
-			'description'   => __( 'A short description of the sidebar.' ),
+			'id'            => 'aside-1',
+			'name'          => __( 'Sidebar aside-1' ),
+			'description'   => __( 'Un premier sidebar de colonne.' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'id'            => 'aside-2',
+			'name'          => __( 'Sidebar aside-2' ),
+			'description'   => __( 'Un deuxièeme sidebar de colonne.' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title">',
@@ -135,7 +145,7 @@ function igc31w_register_sidebars() {
 		)
 	);
 }
-add_action( 'widgets_init', 'igc31w_register_sidebars' );
+add_action( 'widgets_init', 'igc31w_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
@@ -190,7 +200,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Changes the titles of the menu sidebar
  */
 function igc31w_filtre_choix_menu( $obj_menu, $arg ) {
-	if ( $arg->menu == "sidebar" ) {
+	if ( $arg->menu == "aside" ) {
 
 		foreach ( $obj_menu as $cle => $value ) {
 			$value->title = substr( $value->title, strpos( $value->title, " " ) );

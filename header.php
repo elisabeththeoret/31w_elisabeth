@@ -31,8 +31,7 @@
 				array(
 					"menu" => "principal",
 					"container" => "nav",
-					"container_class" => "nav__principal",
-					"menu_class" => "nav",
+					"container_class" => "menu__principal",
 				)
 			);
 		?>
@@ -62,16 +61,23 @@
 		</div><!-- .site__branding -->
 	</header><!-- #masthead -->
 
-	<aside class="site__sidebar">
-		<h3>Cours</h3>
+	<aside class="site__menu">
+		<h2>Cours</h2>
 		<?php
 			wp_nav_menu(
 				array(
-					"menu" => "sidebar",
-					"container"=> "nav",
-					"container_class"=> "nav__sidebar",
-					"menu_class" => "nav",
+					"menu" => "aside",
+					"container" => "nav",
+					"container_class" => "menu__aside",
 				)
 			);
+		?>
+	</aside><!-- .site__menu -->
+
+	<aside class="site__sidebar">
+		<h6>Calendrier</h6>
+		<?php
+			get_sidebar( 'aside-1' ); 
+			get_sidebar( 'aside-2' );
 		?>
 	</aside><!-- .site__sidebar -->
