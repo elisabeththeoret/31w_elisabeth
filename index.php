@@ -14,7 +14,7 @@
 
 get_header();
 ?>
-	<h1></h1>
+
 	<main class="site__main">
 		<code>Index.php</code>
 
