@@ -30,11 +30,14 @@
 
 .site__menu {
 	grid-area: menu;
-	background-color: #cccccc;
 }
 
 .site__sidebar {
 	grid-area: sidebar;
+}
+
+.site__menu,
+.site__sidebar {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;

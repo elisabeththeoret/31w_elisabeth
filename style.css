@@ -596,7 +596,7 @@ textarea {
   list-style-type: none;
 }
 
-/* Navigation sidebar
+/* Navigation aside
 --------------------------------------------- */
 .menu__aside {
   display: flex;
@@ -615,6 +615,18 @@ textarea {
 --------------------------------------------- */
 .sidebar {
   padding: 1rem 0;
+}
+
+/* Footer
+--------------------------------------------- */
+.site__footer {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.site__footer > div {
+  width: 20%;
 }
 
 /*--------------------------------------------------------------
@@ -645,11 +657,14 @@ textarea {
 
 .site__menu {
   grid-area: menu;
-  background-color: #cccccc;
 }
 
 .site__sidebar {
   grid-area: sidebar;
+}
+
+.site__menu,
+.site__sidebar {
   display: flex;
   flex-direction: column;
   gap: 20px;
