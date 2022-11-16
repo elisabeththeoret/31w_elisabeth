@@ -659,6 +659,26 @@ textarea {
   list-style-type: none;
 }
 
+/* Navigation Evenement
+--------------------------------------------- */
+.menu__evenement .menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0;
+  list-style-type: none;
+}
+
+.menu__evenement .menu-item {
+  flex: 0 1 200px;
+  padding: 20px;
+  border: 1px solid #aaa;
+}
+
+.menu__evenement .menu-item a {
+  text-decoration: none;
+}
+
 /* Sidebar
 --------------------------------------------- */
 .sidebar {
