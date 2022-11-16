@@ -11,7 +11,11 @@
 ?>
 
 	<footer class="site__footer">
-		<h2>Pied de page du IGC31W</h2>
+		<h4>igc31w</h4>
+		<?= get_sidebar( 'footer-1' ); ?>
+		<?= get_sidebar( 'footer-2' ); ?>
+		<?= get_sidebar( 'footer-3' ); ?>
+		<?= get_sidebar( 'footer-4' ); ?>
 	</footer><!-- .site__footer -->
 </div><!-- #page -->
 

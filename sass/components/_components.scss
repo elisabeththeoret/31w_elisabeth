@@ -2,10 +2,14 @@
 --------------------------------------------- */
 @import "navigation/menu_principal";
 
-/* Navigation sidebar
+/* Navigation aside
 --------------------------------------------- */
 @import "navigation/menu_aside";
 
 /* Sidebar
 --------------------------------------------- */
-@import "sidebar";
+@import "elements/sidebar";
+
+/* Footer
+--------------------------------------------- */
+@import "elements/footer";
