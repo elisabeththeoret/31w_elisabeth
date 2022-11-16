@@ -62,7 +62,13 @@
 	</header><!-- #masthead -->
 
 	<aside class="site__menu">
-		<h2>Cours</h2>
+		<div class="site__menu__header">
+			<input type="checkbox" id="chkBurger" class="chkBurger">
+			<label for="chkBurger" class="burger">
+				<code>&#10148;</code>
+			</label>
+			<h2>Cours</h2>
+		</div>
 		<?php
 			wp_nav_menu(
 				array(

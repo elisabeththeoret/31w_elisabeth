@@ -598,8 +598,56 @@ textarea {
 
 /* Navigation aside
 --------------------------------------------- */
+.site__menu__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1;
+  background-color: inherit;
+}
+
+.chkBurger {
+  display: none;
+}
+.chkBurger:checked ~ .burger {
+  transform: rotate(90deg);
+}
+
+.burger {
+  transform: rotate(0);
+  transition: transform 500ms;
+  font-size: 1rem;
+  width: 1rem;
+  height: 1rem;
+}
+@media screen and (min-width: 700px) {
+  .burger {
+    display: none;
+  }
+}
+
 .menu__aside {
   display: flex;
+  position: absolute;
+  top: 50px;
+  padding: 20px 40px;
+  transform: translate(-40px, calc(-100vh - 40px));
+  transition: transform 500ms;
+  width: 100vw;
+  background-color: inherit;
+}
+.site__menu__header:has(> .chkBurger:checked) ~ .menu__aside {
+  transform: translate(-40px, 0);
+}
+@media screen and (min-width: 700px) {
+  .menu__aside {
+    position: static;
+    width: 100%;
+    padding: 0;
+    transform: translate(0);
+    transition: none;
+  }
 }
 
 .menu__aside .menu {
@@ -657,6 +705,7 @@ textarea {
 
 .site__menu {
   grid-area: menu;
+  position: relative;
 }
 
 .site__sidebar {
