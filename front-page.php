@@ -16,7 +16,7 @@ get_header();
 ?>
 
 	<main class="site__main">
-		<code>Index.php</code>
+		<code>front-page.php</code>
 
 		<?php
 		if ( have_posts() ) :
