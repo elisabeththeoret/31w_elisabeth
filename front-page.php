@@ -26,21 +26,31 @@ get_header();
 				"container_class" => "menu__evenement",
 			)
 		);
-
-		if ( have_posts() ) :
-
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-			?>
-				<h2><?= get_the_title(); ?></h2>
-				<p><?= wp_trim_words( get_the_excerpt(), 50, " <a href='".get_the_permalink()."'>Suite</a>" ); ?></p>
-			<?php
-			endwhile;
-
-		endif;
 		?>
 
+		<section class="grille">
+
+			<?php
+			if ( have_posts() ) :
+
+				/* Start the Loop */
+				while ( have_posts() ) :
+					the_post();
+				?>
+
+					<article class="grille__article">
+						<h2><?= get_the_title(); ?></h2>
+						<p><?= wp_trim_words( get_the_excerpt(), 20, " ..." ); ?></p>
+						<a href="<?= get_the_permalink(); ?>">En savoir plus</a>
+					</article>
+
+				<?php
+				endwhile;
+
+			endif;
+			?>
+
+		</section><!-- /.grille -->
 	</main><!-- .site__main -->
 
 <?php

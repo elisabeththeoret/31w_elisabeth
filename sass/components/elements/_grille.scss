@@ -1,0 +1,9 @@
+.grille {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.grille__article {
+	flex: 0 1 400px;
+}

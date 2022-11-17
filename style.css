@@ -685,6 +685,18 @@ textarea {
   padding: 1rem 0;
 }
 
+/* Grille
+--------------------------------------------- */
+.grille {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.grille__article {
+  flex: 0 1 400px;
+}
+
 /* Footer
 --------------------------------------------- */
 .site__footer {
