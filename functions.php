@@ -250,14 +250,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 function igc31w_filtre_choix_menu( $obj_menu, $arg ) {
 	if ( $arg->menu == "aside" ) {
-
 		foreach ( $obj_menu as $cle => $value ) {
 			$value->title = substr( $value->title, strpos( $value->title, " " ) );
 			$value->title = substr( $value->title, 0, strrpos( $value->title, "(" ) - strlen( $value->title ) );
-
-			// $value->title = wp_trim_words( $value->title, 3, " ..." );
 		}
-
 	}
 
 	return $obj_menu;
@@ -273,7 +269,6 @@ add_filter( 'wp_nav_menu_objects', 'igc31w_filtre_choix_menu', 10, 2 );
 function prefix_nav_description( $item_output, $item ) {
 	// si l'option description est non vide
 	if ( ! empty( $item->description ) ) {
-
 		// remplace la fermeture de la balise </a> par une structure HTML qui incluera la description
 		// La div.menu-item-icone permettra d'inclure un îcone par css avec background-image
 		$item_output = str_replace(
@@ -281,8 +276,8 @@ function prefix_nav_description( $item_output, $item ) {
 			'<hr><span class="menu-item-description">' . $item->description . '</span><div class="menu-item-icone"></div></a>',
 			$item_output
 		);
-
 	}
+
 	return $item_output;
 }
 add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 5 );
