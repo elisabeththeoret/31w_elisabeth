@@ -81,9 +81,7 @@
 	</aside><!-- .site__menu -->
 
 	<aside class="site__sidebar">
-		<h6>Calendrier</h6>
-		<?php
-			get_sidebar( 'aside-1' ); 
-			get_sidebar( 'aside-2' );
-		?>
+		<?= get_sidebar( 'aside-1' ); ?>
+		
+		<?= get_sidebar( 'aside-2' ); ?>
 	</aside><!-- .site__sidebar -->
