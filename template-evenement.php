@@ -18,8 +18,8 @@ get_header();
 		?>
 			<h1><?= the_title(); ?></h1>
 			<?= the_content(); ?>
-			<p>Adresse de l'événement : <?= the_field('adresse'); ?></p>
-			<p>Date et heure : <?= the_field('date_et_heure'); ?></p>
+			<p>Adresse de l'événement : <?= the_field('adresse_de_levenement'); ?></p>
+			<p>Date et heure : <?= the_field('date_et_heure_de_levenement'); ?></p>
 		<?php
 		endif;
 		?>
