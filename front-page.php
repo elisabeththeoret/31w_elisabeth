@@ -38,34 +38,11 @@ get_header();
 					the_post();
 
 					if ( in_category( 'galerie' ) ) :
-					?>
-
-						<article class="grille__galerie">
-
-							<?= the_title(); ?>
-							<?= the_content(); ?>
-
-						</article>
-
-					<?php
+						get_template_part( 'template-parts/accueil-galerie', '' );
 					endif;
 
 					if ( in_category( 'cours' ) ) :
-					?>
-
-						<article class="grille__article">
-
-							<h2><?= the_field("nom_du_cours"); ?></h2>
-							<div class="grille__infos">
-								<small><?= the_field("sigle_du_cours"); ?></small>
-								<small><?= the_field("duree_du_cours"); ?> h</small>
-							</div>
-							<p><?= wp_trim_words( get_the_excerpt(), 20, " ..." ); ?></p>
-							<a href="<?= get_the_permalink(); ?>">En savoir plus</a>
-
-						</article>
-
-						<?php
+						get_template_part( 'template-parts/accueil-cours', '' );
 					endif;
 
 				endwhile;
@@ -74,6 +51,7 @@ get_header();
 			?>
 
 		</section><!-- /.grille -->
+
 	</main><!-- .site__main -->
 
 <?php

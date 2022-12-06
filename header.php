@@ -37,7 +37,6 @@
 		?>
 
 		<div class="site__branding">
-			<!-- Si récupérer "31W" et petite description de haut de page... -->
 			<?php
 			the_custom_logo();
 
@@ -57,15 +56,8 @@
 				while ( have_posts() ) :
 					the_post();
 
-					if ( in_category( 'principale' ) ) : 
-				?>
-
-					<section class="section__principale">
-						<h1><?= the_title(); ?></h1>
-						<p><?= the_content(); ?></p>
-					</section>
-
-				<?php
+					if ( in_category( 'principale' ) ) :
+						get_template_part( 'template-parts/section-principale', "" );
 					endif;
 
 				endwhile;
