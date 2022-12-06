@@ -16,13 +16,19 @@ get_header();
 		if ( have_posts() ) :
 			the_post();
 		?>
+
 			<h1><?= the_title(); ?></h1>
+
+			<div class="article__infos">
+				<span>Adresse de l'événement : <?= the_field( 'adresse_de_levenement' ); ?></span>
+				<span>Date : <?= the_field( 'date_de_levenement' ); ?> <?= the_field( 'heure_de_levenement' ); ?></span>
+			</div>
+
 			<?= the_content(); ?>
-			<p>Adresse de l'événement : <?= the_field('adresse_de_levenement'); ?></p>
-			<p>Date et heure : <?= the_field('date_et_heure_de_levenement'); ?></p>
+
 		<?php
 		endif;
-		?>
+	?>
 
 	</main><!-- /.site__main -->
 

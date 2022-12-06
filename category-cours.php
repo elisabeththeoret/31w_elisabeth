@@ -12,6 +12,7 @@ get_header();
 
 	<main class="site__main">
 		<code>category-cours.php</code>
+
 		<section class="liste">
 
 		<?php
@@ -20,25 +21,34 @@ get_header();
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-				// $titre = get_the_title();
-				// $titre = substr( $titre, strpos( $titre, " " ), strrpos( $titre, "(" ) - strlen( $titre ) );
-			?>
+
+				if ( ! in_category( 'principale' ) ) :
+				?>
 
 				<article class="liste__article">
-					<h2><?= the_field('nom_du_cours'); ?></h2>
-					<span>Sigle du cours : <?= the_field('sigle_du_cours'); ?></span>
-					<span>Durée du cours : <?= the_field('duree_du_cours') ?>h</span>
+
+					<h2><?= the_field( 'nom_du_cours' ); ?></h2>
+
+					<div class="liste__infos">
+						<span>Sigle du cours : <?= the_field( 'sigle_du_cours' ); ?></span>
+						<span>Durée du cours : <?= the_field( 'duree_du_cours' ) ?>h</span>
+					</div>
+
 					<p><?= wp_trim_words( get_the_excerpt(), 40, " ..." ); ?></p>
 					<a href="<?= get_the_permalink() ?>">En savoir plus</a>
+
 				</article>
 
-			<?php
+				<?php
+				endif;
+
 			endwhile;
 
 		endif;
 		?>
 
 		</section><!-- /.liste -->
+
 	</main><!-- /.site__main -->
 
 <?php
