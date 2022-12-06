@@ -37,6 +37,7 @@
 		?>
 
 		<div class="site__branding">
+			<!-- Si récupérer "31W" et petite description de haut de page... -->
 			<?php
 			the_custom_logo();
 
@@ -50,12 +51,25 @@
 			<?php
 			endif;
 
-			$igc31w_description = get_bloginfo( 'description', 'display' );
+			if ( have_posts() ) :
 
-			if ( $igc31w_description || is_customize_preview() ) :
-			?>
-				<p class="site__description"><?= $igc31w_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php
+				/* Start the Loop */
+				while ( have_posts() ) :
+					the_post();
+
+					if ( in_category( 'principale' ) ) : 
+				?>
+
+					<section class="section__principale">
+						<h1><?= the_title(); ?></h1>
+						<p><?= the_content(); ?></p>
+					</section>
+
+				<?php
+					endif;
+
+				endwhile;
+
 			endif;
 			?>
 		</div><!-- .site__branding -->
