@@ -87,7 +87,7 @@
 	</aside><!-- .site__menu -->
 
 	<aside class="site__sidebar">
-		<?= get_sidebar( 'aside-1' ); ?>
+		<?= get_sidebar( 'calendrier' ); ?>
 		
-		<?= get_sidebar( 'aside-2' ); ?>
+		<?= get_sidebar( 'grande-citation' ); ?>
 	</aside><!-- .site__sidebar -->

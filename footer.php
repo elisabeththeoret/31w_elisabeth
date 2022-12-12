@@ -11,11 +11,18 @@
 ?>
 
 	<footer class="site__footer">
-		<h4>igc31w</h4>
-		<?= get_sidebar( 'footer-1' ); ?>
-		<?= get_sidebar( 'footer-2' ); ?>
-		<?= get_sidebar( 'footer-3' ); ?>
-		<?= get_sidebar( 'footer-4' ); ?>
+
+		<div class="footer__brand">
+			<h4>igc31w</h4>
+			<?= get_sidebar( 'icones-reseaux' ); ?>
+		</div>
+
+		<?= get_sidebar( 'adresse' ); ?>
+
+		<?= get_sidebar( 'coordonnees' ); ?>
+
+		<?= get_sidebar( 'citations' ); ?>
+
 	</footer><!-- .site__footer -->
 </div><!-- #page -->
 

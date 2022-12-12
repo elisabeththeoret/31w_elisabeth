@@ -124,9 +124,9 @@ add_action( 'after_setup_theme', 'igc31w_content_width', 0 );
 function igc31w_widgets_init() {
 	register_sidebar(
 		array(
-			'id'            => 'aside-1',
-			'name'          => __( 'Sidebar aside-1' ),
-			'description'   => __( 'Un premier sidebar de colonne.' ),
+			'id'            => 'calendrier',
+			'name'          => __( 'Sidebar Calendrier' ),
+			'description'   => __( 'Un sidebar de colonne pour un calendrier.' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title">',
@@ -136,9 +136,9 @@ function igc31w_widgets_init() {
 
 	register_sidebar(
 		array(
-			'id'            => 'aside-2',
-			'name'          => __( 'Sidebar aside-2' ),
-			'description'   => __( 'Un deuxième sidebar de colonne.' ),
+			'id'            => 'grande-citation',
+			'name'          => __( 'Sidebar Grande citation' ),
+			'description'   => __( 'Un sidebar de colonne pour une grande citation.' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title">',
@@ -148,9 +148,9 @@ function igc31w_widgets_init() {
 
 	register_sidebar(
 		array(
-			'id'            => 'footer-1',
-			'name'          => __( 'Sidebar footer-1' ),
-			'description'   => __( 'Un premier sidebar de footer.' ),
+			'id'            => 'icones-reseaux',
+			'name'          => __( 'Sidebar Icones reseaux' ),
+			'description'   => __( 'Un sidebar de footer pour les icones de réseaux sociaux.' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title">',
@@ -160,9 +160,9 @@ function igc31w_widgets_init() {
 
 	register_sidebar(
 		array(
-			'id'            => 'footer-2',
-			'name'          => __( 'Sidebar footer-2' ),
-			'description'   => __( 'Un deuxième sidebar de footer.' ),
+			'id'            => 'adresse',
+			'name'          => __( 'Sidebar Adresse' ),
+			'description'   => __( 'Un sidebar de footer pour l\'adresse du Collège.' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title">',
@@ -172,9 +172,9 @@ function igc31w_widgets_init() {
 
 	register_sidebar(
 		array(
-			'id'            => 'footer-3',
-			'name'          => __( 'Sidebar footer-3' ),
-			'description'   => __( 'Un premier sidebar de footer.' ),
+			'id'            => 'coordonnees',
+			'name'          => __( 'Sidebar Coordonnées' ),
+			'description'   => __( 'Un sidebar de footer pour les coordonnées du Collège.' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title">',
@@ -184,9 +184,9 @@ function igc31w_widgets_init() {
 
 	register_sidebar(
 		array(
-			'id'            => 'footer-4',
-			'name'          => __( 'Sidebar footer-4' ),
-			'description'   => __( 'Un deuxième sidebar de footer.' ),
+			'id'            => 'recherche',
+			'name'          => __( 'Sidebar Recherche' ),
+			'description'   => __( 'Un sidebar de footer pour une barre de recherche.' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title">',
