@@ -8,10 +8,22 @@
 
 .menu__evenement .menu-item {
 	flex: 0 1 200px;
-	padding: 20px;
-	border: 1px solid #aaa;
-}
+	display: flex;
 
-.menu__evenement .menu-item a {
-	text-decoration: none;
+	& a {
+		flex: 1;
+		font-weight: 600;
+		padding: 20px;
+		border: 1px solid $color__green;
+		transition: ease-in-out 100ms;
+	}
+
+	& a:hover,
+	& a:focus,
+	& a:active {
+		color: $color__salmon;
+		border-color: $color__salmon;
+		border-bottom: 3px solid $color__salmon;
+		padding-bottom: 18px;
+	}
 }

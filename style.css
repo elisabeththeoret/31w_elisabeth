@@ -660,6 +660,9 @@ textarea {
 /* Site Main
 --------------------------------------------- */
 .site__main {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
   padding: 40px;
   background-color: #fff;
 }
@@ -838,12 +841,20 @@ textarea {
 
 .menu__evenement .menu-item {
   flex: 0 1 200px;
-  padding: 20px;
-  border: 1px solid #aaa;
+  display: flex;
 }
-
 .menu__evenement .menu-item a {
-  text-decoration: none;
+  flex: 1;
+  font-weight: 600;
+  padding: 20px;
+  border: 1px solid #2e8b57;
+  transition: ease-in-out 100ms;
+}
+.menu__evenement .menu-item a:hover, .menu__evenement .menu-item a:focus, .menu__evenement .menu-item a:active {
+  color: #ffa07a;
+  border-color: #ffa07a;
+  border-bottom: 3px solid #ffa07a;
+  padding-bottom: 18px;
 }
 
 /* Navigation Icones réseaux sociaux
