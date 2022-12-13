@@ -1,0 +1,15 @@
+.footer__recherche {
+	& label {
+		opacity: 0;
+		height: 0px;
+	}
+
+	& input::placeholder {
+		color: $color__text-input-placeholder;
+	}
+
+	& button {
+		font-size: 3em;
+		padding: 0px;
+	}
+}

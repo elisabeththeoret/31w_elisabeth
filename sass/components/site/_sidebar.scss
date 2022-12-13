@@ -1,0 +1,24 @@
+.site__menu,
+.site__sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 20px;
+	color: $color__text-body-reverse;
+	background-color: $color__background-sidebar;
+
+	@media screen and ( min-width: 700px ) {
+		padding: 20px 40px;
+	}
+
+	& a,
+	& a:visited {
+		color: $color__link-reverse;
+	}
+
+	& a:hover,
+	& a:focus,
+	& a:active {
+		color: $color__link-hover;
+	}
+}

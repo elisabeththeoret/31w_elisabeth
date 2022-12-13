@@ -4,6 +4,7 @@
 	align-items: center;
 	gap: 10px;
 	z-index: 1;
+	color: inherit;
 	background-color: inherit;
 }
 
@@ -30,19 +31,27 @@
 .menu__aside {
 	display: flex;
 	position: absolute;
-	top: 50px;
-	padding: 20px 40px;
-	transform: translate(-40px, calc(-100vh - 40px));
-	transition: transform 500ms;
-	width: 100vw;
+	width: inherit;
+	height: 0%;
+	overflow: hidden;
+	transform: translateY(-80px);
+	transition: transform 500ms, opacity 500ms;
+	color: inherit;
 	background-color: inherit;
+	opacity: 0;
 
 	.site__menu__header:has( > .chkBurger:checked ) ~ & {
-		transform: translate(-40px, 0);
+		position: relative;
+		height: 100%;
+		transform: translateY(0px);
+		opacity: 1;
 	}
 
 	@media screen and ( min-width: 700px ) {
 		position: static;
+		height: 100%;
+		overflow: visible;
+		opacity: 1;
 		width: 100%;
 		padding: 0;
 		transform: translate(0);

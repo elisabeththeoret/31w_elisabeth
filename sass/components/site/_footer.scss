@@ -1,0 +1,27 @@
+.site__footer {
+	padding: 40px;
+	display: flex;
+	justify-content: space-between;
+	color: $color__white;
+	color: $color__text-body-reverse;
+	background-color: $color__background-reverse;
+
+	& a,
+	& a:visited {
+		color: $color__link-reverse;
+	}
+
+	& a:hover,
+	& a:focus,
+	& a:active {
+		color: $color__link-hover;
+	}
+
+	& > div {
+		width: 25%;
+	}
+
+	& .footer__brand {
+		min-width: max-content;
+	}
+}

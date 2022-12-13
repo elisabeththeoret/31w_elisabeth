@@ -1,8 +1,20 @@
-/* Navigation principale
+/* Site Section principale
+--------------------------------------------- */
+@import "site/section_principale";
+
+/* Site Sidebar
+--------------------------------------------- */
+@import "site/sidebar";
+
+/* Site Footer
+--------------------------------------------- */
+@import "site/footer";
+
+/* Navigation Principale
 --------------------------------------------- */
 @import "navigation/menu_principal";
 
-/* Navigation aside
+/* Navigation Aside
 --------------------------------------------- */
 @import "navigation/menu_aside";
 
@@ -16,12 +28,16 @@
 
 /* Sidebar
 --------------------------------------------- */
-@import "elements/sidebar";
+@import "elements/sidebar_widget";
 
 /* Grille
 --------------------------------------------- */
 @import "elements/grille";
 
-/* Footer
+/* Footer Recherche
 --------------------------------------------- */
-@import "elements/footer";
+@import "elements/footer_recherche";
+
+/* Footer Adresse
+--------------------------------------------- */
+@import "elements/footer_adresse";

@@ -455,6 +455,7 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
+  color: #202020;
   background: #fff;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 16px;
@@ -493,18 +494,18 @@ dd {
 a {
   display: block;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  color: #2e8b57;
+  color: #202020;
   text-decoration: none;
   transition: 200ms ease-in-out;
 }
 a:visited {
-  color: #2e8b57;
+  color: #202020;
 }
 a:hover, a:focus, a:active {
   color: #ffa07a;
 }
 a:focus {
-  outline: thin dotted;
+  outline: none;
 }
 a:hover, a:active {
   outline: 0;
@@ -599,7 +600,61 @@ textarea {
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-/* Navigation principale
+/* Site Section principale
+--------------------------------------------- */
+/* Site Sidebar
+--------------------------------------------- */
+.site__menu,
+.site__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  color: #ffffff;
+  background-color: #404040;
+}
+@media screen and (min-width: 700px) {
+  .site__menu,
+.site__sidebar {
+    padding: 20px 40px;
+  }
+}
+.site__menu a, .site__menu a:visited,
+.site__sidebar a,
+.site__sidebar a:visited {
+  color: #ffffff;
+}
+.site__menu a:hover, .site__menu a:focus, .site__menu a:active,
+.site__sidebar a:hover,
+.site__sidebar a:focus,
+.site__sidebar a:active {
+  color: #ffa07a;
+}
+
+/* Site Footer
+--------------------------------------------- */
+.site__footer {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  color: #ffffff;
+  background-color: #202020;
+}
+.site__footer a, .site__footer a:visited {
+  color: #ffffff;
+}
+.site__footer a:hover, .site__footer a:focus, .site__footer a:active {
+  color: #ffa07a;
+}
+.site__footer > div {
+  width: 25%;
+}
+.site__footer .footer__brand {
+  min-width: max-content;
+}
+
+/* Navigation Principale
 --------------------------------------------- */
 .menu__principal {
   display: flex;
@@ -614,7 +669,7 @@ textarea {
   list-style-type: none;
 }
 
-/* Navigation aside
+/* Navigation Aside
 --------------------------------------------- */
 .site__menu__header {
   position: relative;
@@ -622,6 +677,7 @@ textarea {
   align-items: center;
   gap: 10px;
   z-index: 1;
+  color: inherit;
   background-color: inherit;
 }
 
@@ -648,19 +704,27 @@ textarea {
 .menu__aside {
   display: flex;
   position: absolute;
-  top: 50px;
-  padding: 20px 40px;
-  transform: translate(-40px, calc(-100vh - 40px));
-  transition: transform 500ms;
-  width: 100vw;
+  width: inherit;
+  height: 0%;
+  overflow: hidden;
+  transform: translateY(-80px);
+  transition: transform 500ms, opacity 500ms;
+  color: inherit;
   background-color: inherit;
+  opacity: 0;
 }
 .site__menu__header:has(> .chkBurger:checked) ~ .menu__aside {
-  transform: translate(-40px, 0);
+  position: relative;
+  height: 100%;
+  transform: translateY(0px);
+  opacity: 1;
 }
 @media screen and (min-width: 700px) {
   .menu__aside {
     position: static;
+    height: 100%;
+    overflow: visible;
+    opacity: 1;
     width: 100%;
     padding: 0;
     transform: translate(0);
@@ -712,7 +776,7 @@ textarea {
 
 /* Sidebar
 --------------------------------------------- */
-.sidebar {
+.sidebar__widget {
   padding: 1rem 0;
 }
 
@@ -728,39 +792,25 @@ textarea {
   flex: 0 1 400px;
 }
 
-/* Footer
+/* Footer Recherche
 --------------------------------------------- */
-.site__footer {
-  padding: 40px;
-  display: flex;
-  justify-content: space-between;
-  color: #ffffff;
-  background-color: #202020;
-}
-
-.site__footer .footer__brand {
-  min-width: max-content;
-}
-
-.site__footer > div {
-  width: 25%;
-}
-
-.site__footer .footer__adresse figure img {
-  object-fit: cover;
-  height: 100%;
-}
-
-.site__footer .footer__recherche label {
+.footer__recherche label {
   opacity: 0;
   height: 0px;
 }
-.site__footer .footer__recherche input::placeholder {
+.footer__recherche input::placeholder {
   color: #7b7b7b;
 }
-.site__footer .footer__recherche button {
+.footer__recherche button {
   font-size: 3em;
   padding: 0px;
+}
+
+/* Footer Adresse
+--------------------------------------------- */
+.footer__adresse figure img {
+  object-fit: cover;
+  height: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -771,12 +821,12 @@ textarea {
 .site {
   display: grid;
   grid-template-columns: auto;
-  grid-template-areas: "menu" "header" "main" "sidebar" "footer";
+  grid-template-areas: "header" "menu" "main" "sidebar" "footer";
 }
 @media screen and (min-width: 700px) {
   .site {
     grid-template-columns: 25% auto;
-    grid-template-areas: "header header" "menu main" "sidebar main" ". main" "footer footer";
+    grid-template-areas: "header header" "menu main" "sidebar main" "sidebar main" "footer footer";
   }
 }
 
@@ -796,15 +846,6 @@ textarea {
 
 .site__sidebar {
   grid-area: sidebar;
-}
-
-.site__menu,
-.site__sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px 40px;
-  background-color: #cccccc;
 }
 
 .site__footer {
