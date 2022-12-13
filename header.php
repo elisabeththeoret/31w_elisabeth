@@ -40,16 +40,6 @@
 			<?php
 			the_custom_logo();
 
-			if ( is_front_page() && is_home() ) :
-			?>
-				<h1 class="site__title"><a href="<?= esc_url( home_url( '/' ) ); ?>" rel="home"><?= bloginfo( 'name' ); ?></a></h1>
-			<?php
-			else :
-			?>
-				<p class="site__title"><a href="<?= esc_url( home_url( '/' ) ); ?>" rel="home"><?= bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
 			if ( have_posts() ) :
 
 				/* Start the Loop */
