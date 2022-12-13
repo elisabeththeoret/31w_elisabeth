@@ -11,8 +11,6 @@ get_header();
 ?>
 
 	<main class="site__main">
-		<code>category-cours.php</code>
-
 		<section class="liste">
 
 		<?php
