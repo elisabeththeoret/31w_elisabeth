@@ -1,5 +1,9 @@
 a {
+	display: block;
+	font-family: $font__link;
 	color: $color__link;
+	text-decoration: none;
+	transition: 200ms ease-in-out;
 
 	&:visited {
 		color: $color__link-visited;

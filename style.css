@@ -369,8 +369,10 @@ h6 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: clamp(2rem, 4vw, 4rem);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 h2 {
@@ -454,6 +456,9 @@ big {
 --------------------------------------------- */
 body {
   background: #fff;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 1.5625;
 }
 
 ul,
@@ -486,13 +491,17 @@ dd {
 /* Links
 --------------------------------------------- */
 a {
-  color: #4169e1;
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: #2e8b57;
+  text-decoration: none;
+  transition: 200ms ease-in-out;
 }
 a:visited {
-  color: #800080;
+  color: #2e8b57;
 }
 a:hover, a:focus, a:active {
-  color: #191970;
+  color: #ffa07a;
 }
 a:focus {
   outline: thin dotted;
@@ -507,19 +516,23 @@ button,
 input[type=button],
 input[type=reset],
 input[type=submit] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
+  border-color: #ffffff;
+  border-radius: 50em;
+  background: #ffffff;
+  color: #ffa07a;
   line-height: 1;
-  padding: 0.6em 1em 0.4em;
+  padding: 0.75em 1em;
+  transition: 200ms ease-in-out;
 }
 button:hover,
 input[type=button]:hover,
 input[type=reset]:hover,
 input[type=submit]:hover {
-  border-color: #ccc #bbb #aaa;
+  color: #ffffff;
+  background-color: #ffa07a;
+  border-color: #ffa07a;
 }
 button:active, button:focus,
 input[type=button]:active,
@@ -528,7 +541,7 @@ input[type=reset]:active,
 input[type=reset]:focus,
 input[type=submit]:active,
 input[type=submit]:focus {
-  border-color: #aaa #bbb #bbb;
+  border-color: #ffa07a;
 }
 
 input[type=text],
@@ -547,10 +560,12 @@ input[type=datetime],
 input[type=datetime-local],
 input[type=color],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 3px;
+  color: #d6d6d6;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  padding: 10px;
+  transition: 200ms ease-in-out;
 }
 input[type=text]:focus,
 input[type=email]:focus,
@@ -568,11 +583,13 @@ input[type=datetime]:focus,
 input[type=datetime-local]:focus,
 input[type=color]:focus,
 textarea:focus {
-  color: #111;
+  outline: none;
+  color: #ffffff;
+  border-bottom: 3px solid #ffa07a;
 }
 
 select {
-  border: 1px solid #ccc;
+  border: 1px solid #ffffff;
 }
 
 textarea {
@@ -683,6 +700,7 @@ textarea {
 /* Navigation Icones réseaux sociaux
 --------------------------------------------- */
 .menu__icones-reseaux .wp-social-link.icone-reseaux {
+  color: inherit;
   background-color: #2e8b57;
   transition: 200ms ease;
 }
@@ -713,13 +731,36 @@ textarea {
 /* Footer
 --------------------------------------------- */
 .site__footer {
-  padding: 3rem;
+  padding: 40px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  color: #ffffff;
+  background-color: #202020;
+}
+
+.site__footer .footer__brand {
+  min-width: max-content;
 }
 
 .site__footer > div {
-  width: 20%;
+  width: 25%;
+}
+
+.site__footer .footer__adresse figure img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.site__footer .footer__recherche label {
+  opacity: 0;
+  height: 0px;
+}
+.site__footer .footer__recherche input::placeholder {
+  color: #7b7b7b;
+}
+.site__footer .footer__recherche button {
+  font-size: 3em;
+  padding: 0px;
 }
 
 /*--------------------------------------------------------------
