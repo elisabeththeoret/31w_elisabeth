@@ -696,6 +696,34 @@ textarea {
   color: #ffa07a;
 }
 
+/* Site Search
+--------------------------------------------- */
+.site__search {
+  border: 1px solid #ffa07a;
+}
+.site__search form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.site__search label {
+  flex: 1;
+}
+.site__search input[type=search] {
+  width: 100%;
+  padding: 20px;
+  font-size: 1.25em;
+  color: #202020;
+}
+.site__search input[type=submit] {
+  height: 100%;
+  font-size: 1.125em;
+  color: #ffffff;
+  background-color: #ffa07a;
+}
+
 /* Site Footer
 --------------------------------------------- */
 .site__footer {
@@ -904,6 +932,14 @@ textarea {
   flex: 0 1 400px;
 }
 
+/* Liste
+--------------------------------------------- */
+.liste {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 /* Header Utilitaires
 --------------------------------------------- */
 .site__utilitaires {
@@ -958,6 +994,28 @@ textarea {
 .site__title a:hover, .site__title a:focus, .site__title a:active {
   color: #ffffff;
   border-bottom: 1px solid #2e8b57;
+} /* Main Article cours
+--------------------------------------------- */
+.article__cours {
+  display: flex;
+}
+
+.liste__article__search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.liste__article__search .search__figure {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+.liste__article__search .search__figure img {
+  object-fit: contain;
+  height: inherit;
+}
+.liste__article__search .search__texte {
+  max-width: 600px;
 }
 
 /* Footer Recherche

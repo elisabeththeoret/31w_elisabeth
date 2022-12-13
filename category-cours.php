@@ -12,7 +12,6 @@ get_header();
 
 	<main class="site__main">
 		<section class="liste">
-
 		<?php
 		if ( have_posts() ) :
 
@@ -24,7 +23,6 @@ get_header();
 				?>
 
 				<article class="liste__article">
-
 					<h2><?= the_field( 'nom_du_cours' ); ?></h2>
 
 					<div class="liste__infos">
@@ -34,7 +32,6 @@ get_header();
 
 					<p><?= wp_trim_words( get_the_excerpt(), 40, " ..." ); ?></p>
 					<a href="<?= get_the_permalink() ?>">En savoir plus</a>
-
 				</article>
 
 				<?php
@@ -44,7 +41,6 @@ get_header();
 
 		endif;
 		?>
-
 		</section><!-- /.liste -->
 
 	</main><!-- /.site__main -->
