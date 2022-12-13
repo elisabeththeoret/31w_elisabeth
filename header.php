@@ -27,6 +27,8 @@
 
 	<header id="masthead" class="site__header">
 		<?php
+			the_custom_logo();
+
 			wp_nav_menu(
 				array(
 					"menu" => "principal",
@@ -38,8 +40,6 @@
 
 		<div class="site__branding">
 			<?php
-			the_custom_logo();
-
 			if ( have_posts() ) :
 
 				/* Start the Loop */

@@ -369,10 +369,22 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-size: clamp(3rem, 4vw, 5rem);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
   margin-bottom: 10px;
+  line-height: 1.0625;
+  max-width: 40ch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+h1::after {
+  content: "";
+  width: 15%;
+  height: 1px;
+  border-bottom: 3px solid #ffa07a;
 }
 
 h2 {
@@ -602,6 +614,56 @@ textarea {
 --------------------------------------------------------------*/
 /* Site Section principale
 --------------------------------------------- */
+.section__principale {
+  position: relative;
+  min-height: 50vh;
+  width: 100%;
+  color: #ffffff;
+}
+
+.section__principale .texte {
+  position: relative;
+  width: inherit;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(20, 20, 20, 0.75);
+  box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.6) inset;
+}
+.section__principale .texte p {
+  font-size: 1.25em;
+  max-width: 60ch;
+  margin: 0;
+}
+@media screen and (min-width: 700px) {
+  .section__principale .texte {
+    padding: 20px 40px;
+  }
+}
+
+.section__principale img {
+  position: fixed;
+  object-fit: cover;
+  top: 0;
+  width: 100%;
+  height: inherit;
+  min-height: calc(50vh + 70px);
+  z-index: -1;
+  background-color: #202020;
+}
+
+/* Site Main
+--------------------------------------------- */
+.site__main {
+  padding: 40px;
+  background-color: #fff;
+}
+
 /* Site Sidebar
 --------------------------------------------- */
 .site__menu,
@@ -657,8 +719,14 @@ textarea {
 /* Navigation Principale
 --------------------------------------------- */
 .menu__principal {
+  position: sticky;
+  top: 0;
   display: flex;
+  align-items: center;
   padding: 20px 40px;
+  height: 70px;
+  background-color: #202020;
+  z-index: 1;
 }
 
 .menu__principal .menu {
@@ -667,6 +735,23 @@ textarea {
   gap: 40px;
   margin: 0;
   list-style-type: none;
+}
+
+.menu__principal .menu a {
+  font-size: 1.125em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-left: 1px solid #2e8b57;
+  padding-left: 10px;
+  padding-right: 2px;
+}
+.menu__principal .menu a:visited {
+  color: #ffffff;
+}
+.menu__principal .menu a:hover, .menu__principal .menu a:active, .menu__principal .menu a:focus {
+  border-left: 3px solid #ffa07a;
+  padding-right: 0px;
 }
 
 /* Navigation Aside
