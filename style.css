@@ -700,6 +700,7 @@ textarea {
 --------------------------------------------- */
 .site__search {
   border: 1px solid #ffa07a;
+  border-radius: 0 40px 40px 0;
 }
 .site__search form {
   width: 100%;
@@ -722,6 +723,11 @@ textarea {
   font-size: 1.125em;
   color: #ffffff;
   background-color: #ffa07a;
+  border: none;
+  cursor: pointer;
+}
+.site__search input[type=submit]:hover, .site__search input[type=submit]:focus, .site__search input[type=submit]:active {
+  background-color: #2e8b57;
 }
 
 /* Site Footer

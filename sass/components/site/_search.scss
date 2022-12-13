@@ -1,5 +1,6 @@
 .site__search {
 	border: 1px solid $color__salmon;
+	border-radius: 0 40px 40px 0;
 
 	& form {
 		width: 100%;
@@ -25,5 +26,13 @@
 		font-size: 1.125em;
 		color: $color__white;
 		background-color: $color__salmon;
+		border: none;
+		cursor: pointer;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $color__green;
+		}
 	}
 }
