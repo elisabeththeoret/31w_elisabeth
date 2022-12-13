@@ -271,11 +271,11 @@ function prefix_nav_description( $item_output, $item ) {
 	if ( ! empty( $item->description ) ) {
 		// remplace la fermeture de la balise </a> par une structure HTML qui incluera la description
 		// La div.menu-item-icone permettra d'inclure un îcone par css avec background-image
-		$item_output = str_replace(
+		/*$item_output = str_replace(
 			'</a>',
 			'<hr><span class="menu-item-description">' . $item->description . '</span><div class="menu-item-icone"></div></a>',
 			$item_output
-		);
+		);*/
 	}
 
 	return $item_output;
@@ -284,14 +284,20 @@ add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 5 );
 
 /**
  * Modifie la requête principale de Wordpress avant qu'elle soit exécutée
- * le hook « pre_get_posts » se manifeste juste avant d'exécuter la requête principal.
+ * le hook « pre_get_posts » se manifeste juste avant d'exécuter la requête principale.
  * Dépendant de la condition initiale on peut filtrer un type particulier de requête.
- * Dans ce cas, si nous filtrons la requête de la page d'accueil.
  * @param WP_query  $query la requête principal de WP
  */
 function igc31w_modifie_requete_principale( $query ) {
+	// Filtrer la page d'accueil
 	if ( $query->is_home() && $query->is_main_query() && ! is_admin() ) {
 		$query->set( 'category_name', 'accueil' );
+	}
+
+	// Ordonner les articles de la catégorie Cours en ordre croissant
+	if ( $query->is_category( 'cours' ) ) {
+		$query->set( 'orderby', 'title' );
+		$query->set( 'order', 'ASC' );
 	}
 }
 add_action( 'pre_get_posts', 'igc31w_modifie_requete_principale' );
