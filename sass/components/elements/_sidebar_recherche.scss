@@ -33,6 +33,11 @@
 	}
 }
 
-.sidebar__widget :has(.sidebar__recherche) {
+#sidebar-header-recherche {
+	width: 100%;
 	padding-top: 0;
+
+	@media screen and ( min-width: 700px ) {
+		min-width: 30vw;;
+	}
 }

@@ -1,7 +1,7 @@
 .site__utilitaires {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: space-between;
 	padding: 0px 20px;
 	color: $color__text-body-reverse;
@@ -16,10 +16,22 @@
 .site__utilitaires > div {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
+
+	@media screen and ( min-width: 700px ) {
+		width: auto;
+	}
 }
 
 .site__utilitaires .site__branding {
+	width: 100%;
 	font-weight: 300;
+	text-align: center;
+
+	@media screen and ( min-width: 700px ) {
+		width: auto;
+		text-align: left;
+	}
 }
 
 .site__title a {
