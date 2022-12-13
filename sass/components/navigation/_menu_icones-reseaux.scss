@@ -1,8 +1,11 @@
+.menu__icones-reseaux {
+	margin: 0;
+}
+
 .menu__icones-reseaux .wp-social-link.icone-reseaux a {
 	color: $color__green;
 	background-color: $color__white;
 	border-radius: 100%;
-	margin: 0;
 	transition: 200ms ease;
 
 	&:hover {

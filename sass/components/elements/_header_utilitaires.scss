@@ -1,12 +1,42 @@
 .site__utilitaires {
 	display: flex;
+	flex-direction: column;
 	align-items: flex-start;
 	justify-content: space-between;
+	padding: 0px 20px;
+	color: $color__text-body-reverse;
 	background-color: $color__background-body-reverse;
+
+	@media screen and ( min-width: 700px ) {
+		flex-direction: row;
+		padding: 0px 40px;
+	}
 }
 
 .site__utilitaires > div {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+}
+
+.site__utilitaires .site__branding {
+	font-weight: 300;
+}
+
+.site__title a {
+	color: $color__salmon;
+	font-size: 4em;
+	line-height: 1.5;
+	border-bottom: 1px solid $color__salmon;
+	margin-bottom: 10px;
+
+	&:visited {
+		color: $color__salmon;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__white;
+		border-bottom: 1px solid $color__green;
+	}
 }

@@ -32,3 +32,7 @@
 		}
 	}
 }
+
+.sidebar__widget :has(.sidebar__recherche) {
+	padding-top: 0;
+}
