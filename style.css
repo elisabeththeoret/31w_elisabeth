@@ -859,18 +859,18 @@ textarea {
 
 /* Navigation Icones réseaux sociaux
 --------------------------------------------- */
-.menu__icones-reseaux .wp-social-link.icone-reseaux {
-  color: inherit;
-  background-color: #2e8b57;
+.menu__icones-reseaux .wp-social-link.icone-reseaux a {
+  color: #2e8b57;
+  background-color: #ffffff;
+  border-radius: 100%;
+  margin: 0;
   transition: 200ms ease;
 }
-.menu__icones-reseaux .wp-social-link.icone-reseaux:hover {
-  background-color: #ffa07a;
-  border-radius: 0px;
-  transform: unset;
+.menu__icones-reseaux .wp-social-link.icone-reseaux a:hover {
+  color: #ffa07a;
 }
 
-/* Sidebar
+/* Sidebar Widget
 --------------------------------------------- */
 .sidebar__widget {
   padding: 1rem 0;
@@ -888,23 +888,55 @@ textarea {
   flex: 0 1 400px;
 }
 
+/* Header Utilitaires
+--------------------------------------------- */
+.site__utilitaires {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #202020;
+}
+
+.site__utilitaires > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 /* Footer Recherche
 --------------------------------------------- */
-.footer__recherche label {
+.sidebar__recherche {
+  position: relative;
+}
+.sidebar__recherche label {
+  position: absolute;
   opacity: 0;
   height: 0px;
+  width: 0px;
+  overflow: hidden;
 }
-.footer__recherche input::placeholder {
+.sidebar__recherche input::placeholder {
   color: #7b7b7b;
 }
-.footer__recherche button {
-  font-size: 3em;
-  padding: 0px;
+.sidebar__recherche button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-size: 1.9375em;
+  color: #ffa07a;
+  overflow: hidden;
+  padding: 0;
+  cursor: pointer;
+}
+.sidebar__recherche button:hover, .sidebar__recherche button:focus, .sidebar__recherche button:active {
+  color: #ffffff;
 }
 
 /* Footer Adresse
 --------------------------------------------- */
-.footer__adresse figure img {
+.sidebar__adresse figure img {
   object-fit: cover;
   height: 100%;
 }

@@ -1,11 +1,11 @@
-.menu__icones-reseaux .wp-social-link.icone-reseaux {
-	color: inherit;
-	background-color: #2e8b57;
+.menu__icones-reseaux .wp-social-link.icone-reseaux a {
+	color: $color__green;
+	background-color: $color__white;
+	border-radius: 100%;
+	margin: 0;
 	transition: 200ms ease;
 
 	&:hover {
-		background-color: #ffa07a;
-		border-radius: 0px;
-		transform: unset;
+		color: $color__salmon;
 	}
 }

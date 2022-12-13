@@ -124,8 +124,32 @@ add_action( 'after_setup_theme', 'igc31w_content_width', 0 );
 function igc31w_widgets_init() {
 	register_sidebar(
 		array(
-			'id'            => 'calendrier',
-			'name'          => __( 'Sidebar Calendrier' ),
+			'id'            => 'header-recherche',
+			'name'          => __( 'Sidebar Entête Recherche' ),
+			'description'   => __( 'Un sidebar d\'entête pour une barre de recherche.' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'id'            => 'header-icones-reseaux',
+			'name'          => __( 'Sidebar Entête Icones reseaux' ),
+			'description'   => __( 'Un sidebar d\'entête pour les icones de réseaux sociaux.' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'id'            => 'aside-calendrier',
+			'name'          => __( 'Sidebar Aside Calendrier' ),
 			'description'   => __( 'Un sidebar de colonne pour un calendrier.' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
@@ -136,8 +160,8 @@ function igc31w_widgets_init() {
 
 	register_sidebar(
 		array(
-			'id'            => 'grande-citation',
-			'name'          => __( 'Sidebar Grande citation' ),
+			'id'            => 'aside-citation',
+			'name'          => __( 'Sidebar Aside Citation' ),
 			'description'   => __( 'Un sidebar de colonne pour une grande citation.' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
@@ -148,9 +172,9 @@ function igc31w_widgets_init() {
 
 	register_sidebar(
 		array(
-			'id'            => 'icones-reseaux',
-			'name'          => __( 'Sidebar Icones reseaux' ),
-			'description'   => __( 'Un sidebar de footer pour les icones de réseaux sociaux.' ),
+			'id'            => 'footer-icones-reseaux',
+			'name'          => __( 'Sidebar Footer Icones reseaux' ),
+			'description'   => __( 'Un sidebar de pied de page pour les icones de réseaux sociaux.' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title">',
@@ -160,9 +184,9 @@ function igc31w_widgets_init() {
 
 	register_sidebar(
 		array(
-			'id'            => 'adresse',
-			'name'          => __( 'Sidebar Adresse' ),
-			'description'   => __( 'Un sidebar de footer pour l\'adresse du Collège.' ),
+			'id'            => 'footer-adresse',
+			'name'          => __( 'Sidebar Footer Adresse' ),
+			'description'   => __( 'Un sidebar de pied de page pour l\'adresse du Collège.' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title">',
@@ -172,21 +196,9 @@ function igc31w_widgets_init() {
 
 	register_sidebar(
 		array(
-			'id'            => 'coordonnees',
-			'name'          => __( 'Sidebar Coordonnées' ),
-			'description'   => __( 'Un sidebar de footer pour les coordonnées du Collège.' ),
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
-		)
-	);
-
-	register_sidebar(
-		array(
-			'id'            => 'recherche',
-			'name'          => __( 'Sidebar Recherche' ),
-			'description'   => __( 'Un sidebar de footer pour une barre de recherche.' ),
+			'id'            => 'footer-recherche',
+			'name'          => __( 'Sidebar Footer Recherche' ),
+			'description'   => __( 'Un sidebar de pied de page pour une barre de recherche.' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title">',

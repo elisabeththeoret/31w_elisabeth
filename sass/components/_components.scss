@@ -30,7 +30,7 @@
 --------------------------------------------- */
 @import "navigation/menu_icones-reseaux";
 
-/* Sidebar
+/* Sidebar Widget
 --------------------------------------------- */
 @import "elements/sidebar_widget";
 
@@ -38,10 +38,14 @@
 --------------------------------------------- */
 @import "elements/grille";
 
+/* Header Utilitaires
+--------------------------------------------- */
+@import "elements/header_utilitaires";
+
 /* Footer Recherche
 --------------------------------------------- */
-@import "elements/footer_recherche";
+@import "elements/sidebar_recherche";
 
 /* Footer Adresse
 --------------------------------------------- */
-@import "elements/footer_adresse";
+@import "elements/sidebar_adresse";

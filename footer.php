@@ -14,12 +14,12 @@
 
 		<div class="footer__brand">
 			<h4>igc31w</h4>
-			<?= get_sidebar( 'icones-reseaux' ); ?>
+			<?= get_sidebar( 'footer-icones-reseaux' ); ?>
 		</div>
 
-		<?= get_sidebar( 'adresse' ); ?>
+		<?= get_sidebar( 'footer-adresse' ); ?>
 
-		<?= get_sidebar( 'recherche' ); ?>
+		<?= get_sidebar( 'footer-recherche' ); ?>
 
 	</footer><!-- .site__footer -->
 </div><!-- #page -->

@@ -38,7 +38,27 @@
 			);
 		?>
 
-		<div class="site__branding">
+		<div class="site__utilitaires">
+			<div class="site__branding">
+				<span class="site__title"><a href="<?= esc_url( home_url( '/' ) ); ?>" rel="home"><?= bloginfo( 'name' ); ?></a></span>
+				<?php
+				$igc31w_description = get_bloginfo( 'description', 'display' );
+
+				if ( $igc31w_description || is_customize_preview() ) :
+				?>
+					<p class="site__description"><?= $igc31w_description; ?></p>
+				<?php
+				endif;
+				?>
+			</div>
+
+			<div class="site__utile">
+				<?= get_sidebar( 'header-recherche' ); ?>
+				<?= get_sidebar( 'header-icones-reseaux' ); ?>
+			</div>
+		</div><!-- .site__utilitaires -->
+
+		<section class="site__section">
 			<?php
 			if ( have_posts() ) :
 
@@ -54,7 +74,7 @@
 
 			endif;
 			?>
-		</div><!-- .site__branding -->
+		</section><!-- .site__section -->
 	</header><!-- #masthead -->
 
 	<aside class="site__menu">
@@ -65,6 +85,7 @@
 			</label>
 			<h2>Cours</h2>
 		</div>
+
 		<?php
 			wp_nav_menu(
 				array(
@@ -77,7 +98,7 @@
 	</aside><!-- .site__menu -->
 
 	<aside class="site__sidebar">
-		<?= get_sidebar( 'calendrier' ); ?>
+		<?= get_sidebar( 'aside-calendrier' ); ?>
 		
-		<?= get_sidebar( 'grande-citation' ); ?>
+		<?= get_sidebar( 'aside-citation' ); ?>
 	</aside><!-- .site__sidebar -->

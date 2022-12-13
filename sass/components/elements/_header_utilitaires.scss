@@ -1,0 +1,12 @@
+.site__utilitaires {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	background-color: $color__background-body-reverse;
+}
+
+.site__utilitaires > div {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
