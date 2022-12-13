@@ -19,9 +19,7 @@
 
 		<?= get_sidebar( 'adresse' ); ?>
 
-		<?= get_sidebar( 'coordonnees' ); ?>
-
-		<?= get_sidebar( 'citations' ); ?>
+		<?= get_sidebar( 'recherche' ); ?>
 
 	</footer><!-- .site__footer -->
 </div><!-- #page -->
